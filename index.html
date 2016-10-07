@@ -29,7 +29,7 @@
 		</script>
 	</head>
 	<body>
-		<a class="github-fork-ribbon" href="http://github.com/LasaleFamine/Ragusabot-website" title="Fork me on GitHub">Fork me on GitHub</a>
+		<a id="githubRagusabotWebsite" class="github-fork-ribbon" href="http://github.com/LasaleFamine/Ragusabot-website" title="Fork me on GitHub">Fork me on GitHub</a>
 		<div class="container">
 			<!-- Top Navigation -->
 			<div class="codrops-top clearfix">
@@ -86,7 +86,7 @@
 			</section>
 			<section class="related">
 				<span class="top">Crafted with <i class="fa fa-heart"></i></span>
-				<span class="github"><a href="https://github.com/LasaleFamine/ragusabot"><i class="fa fa-github"></i></span>
+				<span class="github"><a id="githubRagusabot" href="https://github.com/LasaleFamine/ragusabot"><i class="fa fa-github"></i></span>
 			</section>
 		</div><!-- /container -->
 		<script>
@@ -117,6 +117,7 @@
 					var ragusabot = document.querySelector('#first'),
 						ragusanews = document.querySelector('#second'),
 						godev  = document.querySelector('#godev');
+						githubRagusabot  = document.querySelector('#githubRagusabot');
 
 					ragusabot.addEventListener( 'click', function() {
 						ga('trackerRagusabot.send', {
@@ -132,6 +133,26 @@
 						ga('trackerRagusabot.send', {
 							'hitType': 'event',
 							'eventCategory': 'GodevLink',
+							'eventAction': 'Click',
+							'eventLabel': 'Click',
+							'eventValue': 1
+						});
+					} )
+
+					githubRagusabot.addEventListener( 'click', function() {
+						ga('trackerRagusabot.send', {
+							'hitType': 'event',
+							'eventCategory': 'githubRagusabot',
+							'eventAction': 'Click',
+							'eventLabel': 'Click',
+							'eventValue': 1
+						});
+					} )
+
+					githubRagusabotWebsite.addEventListener( 'click', function() {
+						ga('trackerRagusabot.send', {
+							'hitType': 'event',
+							'eventCategory': 'githubRagusabotWebsite',
 							'eventAction': 'Click',
 							'eventLabel': 'Click',
 							'eventValue': 1
